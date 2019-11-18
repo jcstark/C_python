@@ -5,13 +5,7 @@
 int main (void)
 {
     // Ask for the card number.
-    long number;
-    do
-    {
-        number = get_long("Number: ");
-    }
-    while (number < (long) pow(10,12));
-    
+    long number = get_long("Number: ");    
     int check;
     int front = 0;
     for (int i = 1; i <= 16; i += 1)
