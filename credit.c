@@ -57,19 +57,19 @@ int main (void)
     // Check if the module of is 0 and the characteristics of all different cards.
     if (check == 0 && number > pow(10, 14) && number < pow(10, 15) && (front == 34 || front == 37))
     {
-            printf("AMEX \n");
+            printf("AMEX\n");
     }
     else if (check == 0 && number > pow(10, 15) && number < pow(10, 16) && front >= 51 && front <= 55)
     {
-        printf("MASTERCARD \n");
+        printf("MASTERCARD\n");
     }
     else if (check == 0  && number > pow(10, 12) && number < pow(10, 16) && front >= 40 && front < 50)
     {
-        printf("VISA \n");
+        printf("VISA\n");
     }
     else
     {
-        printf("INVALID \n");
+        printf("INVALID\n");
     }  
 }
     
