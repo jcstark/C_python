@@ -6,7 +6,12 @@
 int main(int argc, string argv[])
 {
     // Key validation.
-    int key = atoi(argv[1]);    
+    if (argc == 1)
+    {
+        printf("Usage: ./caesar key\n");
+    }
+    
+    int key = atoi(argv[argc - 1]);    
     if (argc == 2 && key > 0)
     {
         key %= 26;
