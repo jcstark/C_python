@@ -59,20 +59,21 @@ int main(int argc, string argv[])
         // For lower case
         else if (plaintext[i] >= 97 && plaintext[i] <= 122)
         {
-            if ((plaintext[i] + key) >= 122)
+            if ((plaintext[i] + key) <= 122)
             {
-                int loop = (plaintext[i] + key) % 122;
-                printf("%c", 96 + loop);
+                printf("%c", plaintext[i] + key);
             }
             else 
             {
-                printf("%c", plaintext[i] + key);
+                int loop = (plaintext[i] + key) % 122;
+                printf("%c", 96 + loop);
             }
         }         
         else
         {
             printf("%c", plaintext[i]);
         }
+        
         if (isalpha(plaintext[i]) == 0)
         {
             j += 0;    
