@@ -15,7 +15,7 @@ int main(int argc, string argv[])
         printf("Usage: ./vigenere keyword\n");
         return 1;
     }
-    // Check the in
+    // Check if the input is alphabetical. 
     else
     {   
         for (int i = 0; i <= n - 1; i++)
@@ -38,7 +38,7 @@ int main(int argc, string argv[])
     }
   
     string plaintext = get_string("plaintext:  ");
-    printf("Ciphertext: ");
+    printf("ciphertext: ");
     int j = 0;
     for (int i = 0, m = strlen(plaintext); i < m; i++)
     {
