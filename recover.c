@@ -39,8 +39,7 @@ int main(int argc, char *argv[])
         // Each time a header is found...
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            // Counter +1, and create a .jpg file
-            i++;
+            // Create a .jpg file
             char filename[50];
             sprintf(filename, "%03i.jpg", i);
             FILE *outptr = fopen(filename, "a");
@@ -55,6 +54,7 @@ int main(int argc, char *argv[])
             fseek(inptr, -BLOCK, SEEK_CUR);
             // Close the previous jpg
             fclose(outptr);
+            i++;
         }
     }
     // Close the source file
