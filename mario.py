@@ -21,8 +21,6 @@ def pyramid(height):
         air()
         for x in range(i):
             block()
-        #for j in range(height + 1, i + 1, -1):
-            #air()
         print("")
 
 
