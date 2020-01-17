@@ -10,7 +10,7 @@ def main():
         # Sum of the numbers multiplied by 2.
         if i % 2 == 0:
             a = (number % pow(10, i)) // pow(10, i - 1)
-            b = 2 * a;
+            b = 2 * a
             if b >= 10:
                 b = 1 + b % 10
             check = check + b
@@ -40,10 +40,14 @@ def main():
         print("AMEX")
     elif check == 0 and number > pow(10, 15) and number < pow(10, 16) and front >= 51 and front <= 55:
         print("MASTERCARD")
-    elif (check == 0  and number > pow(10, 12) and number < pow(10, 16) and front >= 40 and front < 50):
+    elif check == 0 and number > pow(10, 12) and number < pow(10, 16) and front >= 40 and front < 50:
         print("VISA")
     else:
         print("INVALID")
 
+
 if __name__ == "__main__":
     main()
+
+# Fundamentally I' ve translated my own c code to python in this problem.
+# https://github.com/me50/jcstark/blob/cs50/problems/2019/x/credit/credit.c
