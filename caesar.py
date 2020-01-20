@@ -9,10 +9,11 @@ def main():
         print("Usage: python caesar.py k or ./caesar.py k")
         return 1
     # Insert text to encrypt
-    plaintext = get_string("Plaintext: ")
+    plaintext = get_string("plaintext: ")
+    print("ciphertext: ", end="")
     for c in plaintext:
         # Encrypt every alphabetical character
-        if (ord(c) > 64 and ord(c) < 91 or ord(c) > 96 and ord(c) < 123):
+        if ((ord(c) > 64 and ord(c) < 91) or (ord(c) > 96 and ord(c) < 123)):
             print(chr(ord(c) + (int(argv[1]) % 26)), end="")
         # Do not encrypt non-alphabetical characters
         else:
