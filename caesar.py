@@ -7,7 +7,7 @@ def main():
     # Ensure correct usage
     if len(argv) != 2 or int(argv[1]) < 0: #or # ins'tnum:
         #print("Usage: python caesar.py k or ./caesar.py k")
-        return 1
+        exit(1)
     k = int(argv[1]) % 26
     # Insert text to encrypt
     plaintext = get_string("plaintext: ")
