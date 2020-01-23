@@ -19,11 +19,10 @@ def main():
     # Input the message to ban and split their single words with correct format into a list
     message = get_string("What message would you like to censor?\n")
     message_list = message.strip()
-    message_list = message_list.lower()
     message_list = message_list.split()
     # Check the message to ban
     for x in message_list:
-        if x in banned:
+        if x.lower() in banned:
             print("*" * len(x), end=" ")
         else:
             print(x, end=" ")
