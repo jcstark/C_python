@@ -88,12 +88,13 @@ bool vote(string name)
 void print_winner(void)
 {
     string winner;
+    int w = 0;
     if (candidate_count == 1)
     {
-        printf("%s\n", candidates[0].name);
+        winner = candidates[0].name;
+        printf("%s\n", winner);
         return;
     }
-    int w = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
@@ -102,6 +103,7 @@ void print_winner(void)
             {
                 winner = candidates[i].name;
                 w = i;
+                break;
             }
         }
     }
