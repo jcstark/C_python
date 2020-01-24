@@ -67,27 +67,48 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // Check for repeated candidates
+    int b = 0;
     for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = i + 1; j < candidate_count; j++)
+        if (strcmp(name, candidates[i].name) == 0)
         {
-            if (strcmp(candidates[i].name, candidates[j].name) == 0)
-            {
-                printf("Repeated candidates\n");
-                return 1;
-            }
+            candidates[i].votes++;
+            b++;
         }
+    if (b > 0)
+    {
+        return true;
     }
-
-
-    return 0;
+    else
+    {
+        return false;
+    }
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // TODO
+    string winner;
+    int w = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            if (candidates[i].votes >= candidates[j].votes)
+            {
+                winner = candidates[i].name;
+                w = i;
+            }
+        }
+    }
+
+    printf("%s\n", winner);
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == candidates[w].votes && i != w)
+        {
+            printf("%s\n", candidates[i].name);
+        }
+    }
     return;
 }
 
