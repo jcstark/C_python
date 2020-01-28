@@ -109,7 +109,7 @@ void print_winner(void)
             if (candidates[w].votes > candidates[i + 1].votes)
             {
                 winner = candidates[i].name;
-                w = i;
+                //w = i;
             }
             else if (candidates[w].votes < candidates[i + 1].votes)
             {
