@@ -70,11 +70,17 @@ bool vote(string name)
 
     int b = 0;
     for (int i = 0; i < candidate_count; i++)
+    {
         if (strcmp(name, candidates[i].name) == 0)
         {
             candidates[i].votes++;
             b++;
         }
+        else
+        {
+            continue;
+        }
+    }
     if (b != 0)
     {
         return true;
@@ -110,11 +116,11 @@ void print_winner(void)
                 winner = candidates[j].name;
                 w = j;
             }
-            else
-            {
-                winner = candidates[0].name;
-                w = 0;
-            }
+            //else
+            //{
+                //winner = candidates[0].name;
+              //  w = 0;
+            //}
         }
     }
 
