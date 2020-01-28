@@ -116,11 +116,11 @@ void print_winner(void)
                 winner = candidates[i + 1].name;
                 w = i + 1;
             }
-            //else
-            //{
-              //  winner = candidates[0].name;
-                //w = 0;
-            //}
+            else
+            {
+                winner = candidates[0].name;
+                w = 0;
+            }
         //}
     }
 
