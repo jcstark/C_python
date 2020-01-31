@@ -175,7 +175,6 @@ bool print_winner(void)
         if (candidates[i].votes >= round(0.5 * voter_count))
         {
             printf("%s\n", candidates[i].name);
-            //printf("%i", candidates[i].votes);
             T++;
         }
     }
