@@ -153,9 +153,9 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     int stage = 1;
-    for (int i = 0; i < candidate_count; i++)
+    for (int s = 0; s < candidate_count; s++)
     {
-        if (candidates[i].eliminated == true)
+        if (candidates[s].eliminated == true)
         {
             stage++;
         }
