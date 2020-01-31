@@ -152,17 +152,17 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    int pseudorank = 1;
+    int stage = 1;
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].eliminated == true)
         {
-            pseudorank++;
+            stage++;
         }
     }
     for (int i = 0; i < voter_count; i++)
     {
-        for (int j = 0; j < pseudorank; j++)
+        for (int j = 0; j < stage; j++)
         {
             if (candidates[preferences[i][j]].eliminated == false)
             {
@@ -206,7 +206,6 @@ int find_min(void)
             min = candidates[i].votes;
         }
     }
-
     return min;
 }
 
